@@ -22,7 +22,12 @@ void main()
         system("cls"); // Limpa a tela
         exibirMenu();
         scanf("%d", &opcao);
-        // Processamento da opcao...
+        while (getchar() != '\n')
+            ;
+        if (opcao < 0 || opcao > 3)
+        {
+            printf("Opcao Invalida!\n");
+        }
     } while (opcao != 0);
     printf("Obrigado por usar nosso ATM!");
 }
