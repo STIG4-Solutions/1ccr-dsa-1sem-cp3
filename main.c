@@ -1,3 +1,5 @@
+#include<stdio.h>
+
 void exibirMenu()
 {
     printf("\n========================\n");
