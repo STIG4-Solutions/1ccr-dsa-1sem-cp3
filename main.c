@@ -40,6 +40,23 @@ float realizarDeposito(float saldo)
     return saldo;
 }
 
+float realizarSaque(float saldo)
+{
+    float valor;
+    printf("Valor do saque: ");
+    scanf("%f", &valor);
+    if (valor <= saldo && valor > 0)
+    {
+        saldo -= valor;
+        printf("Saque realizado!\n");
+    }
+    else
+    {
+        printf("Saldo insuficiente ou valor invalido!\n");
+    }
+    return saldo;
+}
+
 void main()
 {
     int opcao;
