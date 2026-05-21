@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 void exibirMenu()
 {
@@ -12,6 +12,15 @@ void exibirMenu()
     printf("0 - Sair\n");
     printf("========================\n");
     printf("Escolha uma opcao: ");
+}
+
+// Funcao para exibir o saldo
+void consultarSaldo(float saldo)
+{
+    printf("\n--- SALDO ATUAL ---\n");
+    printf("R$ %.2f\n", saldo);
+    printf("-------------------\n");
+    system("pause"); // Aguarda o usuario
 }
 
 void main()
