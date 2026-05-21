@@ -60,6 +60,7 @@ float realizarSaque(float saldo)
 void main()
 {
     int opcao;
+    float saldo = 500.0;
     do
     {
         system("cls"); // Limpa a tela
@@ -70,6 +71,23 @@ void main()
         if (opcao < 0 || opcao > 3)
         {
             printf("Opcao Invalida!\n");
+        }
+        switch (opcao)
+        {
+        case 1:
+            consultarSaldo(saldo);
+            break;
+        case 2:
+            saldo = realizarSaque(saldo);
+            break;
+        case 3:
+            saldo = realizarDeposito(saldo);
+            break;
+        case 0:
+            printf("Saindo...\n");
+            break;
+        default:
+            printf("Invalido!");
         }
     } while (opcao != 0);
     printf("Obrigado por usar nosso ATM!");
